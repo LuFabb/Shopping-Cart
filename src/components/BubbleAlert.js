@@ -14,10 +14,11 @@ const styles = {
 
 class BubbleAlert extends Component {
   getNumber(n) {
-    if (!n) { return ' '}
+    if (!n) { 
+      return ' '
+    }
       return n > 9 ? '9+' : n
     }
-  
   
   render() {
     const { value } = this.props
