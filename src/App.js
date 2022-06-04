@@ -17,10 +17,20 @@ class App extends Component {
   }
 
   addToCart = (product) => {
+   const { cart } = this.state
+   if (cart.find(x => x.name === product.name)) {
+     const newCart = cart.map(x => x.name === product.name
+     ? ({
+       ...x,
+       quantity: x.quantity + 1
+     })
+     : x)
+     return  this.setState({ cart: newCart })
+   }
    return this.setState({
      cart: this.state.cart.concat({
        ...product,
-       cantidad: 1,
+       quantity: 1,
      })
    })
   }
