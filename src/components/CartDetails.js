@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Product from "./Product";
+
 
 const styles = {
   cartdetails : {
